@@ -15,8 +15,26 @@ def remove_end_period(string : str) -> str:
         return string[:-1]
     return string
 
-def remove_end_period_list(list : list) -> list:
-    return [remove_end_period(item) for item in list]
+def get_anime_title(json_data : dict) -> list:
+    
+    def extract_titles_from_json(json_data : dict) -> list:
+        title = list(json_data["title"].values())
+        return title
+    
+    def remove_none_value_list(lst : list) -> list:
+        return [item for item in lst if item is not None]
+    
+    
+    def remove_end_period_list(list : list) -> list:
+        return [remove_end_period(item) for item in list]
+    
+    titles = extract_titles_from_json(json_data)
+    titles = remove_none_value_list(titles)
+    titles = remove_end_period_list(titles)
+    
+    return titles
 
-def remove_none_value_list(lst : list) -> list:
-    return [item for item in lst if item is not None]
+
+
+
+
