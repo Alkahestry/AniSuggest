@@ -1,6 +1,6 @@
-from yuno1.preprocessing.summarizer import *
-from yuno1.preprocessing.filter import *
-from yuno1.preprocessing.sentencizer import *
+from yuno.preprocessing.summarizer import *
+from yuno.preprocessing.filter import *
+from yuno.preprocessing.sentencizer import *
 
 # rs = ReviewSentencizer(nlp=spacy.load("en_core_web_sm"))
 # summer = Summarizer()
@@ -34,10 +34,6 @@ class Review:
         str = self.sentencizer_func(str)
         str = self.summarizer_func(str)
         str = self.filter_text(index, str)
-        # str = self.sentencizer.format_text(self.reviews['text'][index])
-        # str = self.sentencizer.sents(str)
-        # str = self.summarizer.summarize(str)
-        # str = self.filter.filter_all(self.reviews['anime_uid'][index],str)
         
         def list_of_list_to_list(l):
             return [item for sublist in l for item in sublist]

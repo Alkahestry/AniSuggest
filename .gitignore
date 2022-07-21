@@ -4,17 +4,7 @@
 /yuno/
 /yuno1/
 /data/
-anime_data.csv
-anime_data.json
-anime_info.pickle
-Anime.rar
-C2_W4_Assignment_Solution.ipynb
-C3_W4_Assignment_Solution.ipynb
-processed.pickle
-processed1.pickle
-reviews.csv
-reviews.csv.zip
-
+checkpoint.pickle
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
